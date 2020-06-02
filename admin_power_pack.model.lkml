@@ -1,1 +1,1 @@
-connection: "insert_any_connection_name_here"
+connection: "admin_power_pack_stub"
