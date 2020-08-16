@@ -19,16 +19,20 @@ The Schedules++ Page enables admins to execute the following operations in bulk:
 These tasks are often time consuming for Looker admins to execute using the base UI since it requires them to sudo as each user individually. This utility allows admins to modify all schedules on a given Dashboard from a single point.
 
 - The entire table is editable. Multiple rows can be edited at the same time. The “Revert” button will undo all local changes. **Details** contains metadata on the schedule plan, with links to System Activity and viewing the Dashboard with the schedule filters. Use the checkbox to the left to apply functions on specific rows:
+
   - **Create/Update** - Update an existing scheduled plan with table data, or create a new scheduled plan if it does not already exist. Common uses would be to change schedule ownership, modify filter values, update recipients
   - **Delete** - Delete the scheduled plan
   - **Run Once** - Reruns the schedule using the [scheduled_plan_run_once](https://docs.looker.com/reference/api-and-integration/api-reference/v4.0/scheduled-plan#run_scheduled_plan_once) endpoint. This is useful for testing specific schedules or if multiple schedules need to be resent immediately.
   - **Disable** - Disable the schedule and prevent the schedule from sending until it’s re-enabled. The `Disable` and `Enable` functions modify the scheduled plan's enabled state. This is only accessible via Looker's API.
   - **Enable** - Enables the schedule. Re-enabling a schedule will send (maximum 1) schedule immediately, if, while it was disabled it should have run
+
 - **Populate Rows** - This will generate a new schedule plan for each row in the results of a Looker query. The use case would be to create distinct schedules for non-Looker users where User Attributes can not be applied.
-  - **Note**: Filter values will be populated if the field label matches the filter name on the Dashboard. Ensure there is a field "Email" to populate Recipients.
+
+  - Filter values will be populated if the field label matches the filter name on the Dashboard. Ensure there is a field "Email" to populate Recipients.
+
 - **Global Actions** - These actions will be applied across all schedules across the instance.
   - **Find & Replace Email** - Update email destinations from a CSV of email address mappings.
-  - **Validate Recent Schedule Jobs** - Currently WIP. This will validate recently run schedules with the ability to resend failures.
+  - **Resend Failed Schedules** - This will validate and resend any schedules that have failed on their most recent attempt, within a specified timeframe.
 
 ### Limitations
 
