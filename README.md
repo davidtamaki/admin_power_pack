@@ -91,8 +91,8 @@ The end result of this will be similar to the above, except that the git repo wi
    - Give your project a name such as "admin_power_pack"
    - As the "Starting Point" select "Blank Project". You'll now have a new project with no files.
 2. Create a project manifest based on this [example](manifest.lkml)
-  - Use the `url` parameter to point to the [GitHub Pages hosted version](https://davidtamaki.github.io/admin_power_pack/looker_admin_power_pack.js) of this extension. This version will be updated regularly.
-  - Alternatively, use the `file` parameter to host the application javascript in the LookML repo and include the [javascript file](looker_admin_power_pack.js) in the LookML project.
+   - Use the `url` parameter to point to the [GitHub Pages hosted version](https://davidtamaki.github.io/admin_power_pack/looker_admin_power_pack.js) of this extension. This version will be updated regularly.
+   - Alternatively, use the `file` parameter to host the application javascript in the LookML repo and include the [javascript file](looker_admin_power_pack.js) in the LookML project.
 3. Create a new model file in your project named "admin_power_pack.model"
    - Provide a [connection](https://docs.looker.com/r/lookml/types/model/connection) value.
    - The connection will not be used so it does not matter which connection is selected. This is just required in order for the project to be valid.
