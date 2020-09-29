@@ -1,0 +1,17 @@
+{
+  "label": "Admin Power Pack",
+  "category_label": "Extensions",
+  "branding": {
+    "tagline": "The APP for Looker Admins."
+  },
+  "constants": {
+    "CONNECTION_NAME": {
+      "label": "Connection Name",
+      "value_constraint": "connection"
+    },
+    "VERSION": {
+      "label": "Version",
+      "description": "APP Version Tag"
+    }
+  }
+}
