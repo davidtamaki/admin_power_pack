@@ -12,7 +12,7 @@ application: admin_power_pack {
     allow_same_origin: no
     core_api_methods: [
       "all_roles", "all_users", "all_groups", "all_datagroups",
-      "me", "user", "create_user", "update_user", "send_user_credentials_email_password_reset",
+      "me", "user", "create_user", "update_user", "delete_user", "send_user_credentials_email_password_reset",
       "all_user_attributes", "set_user_attribute_user_value", "delete_user_attribute_user_value",
       "add_group_user", "delete_group_user", "set_user_roles",
       "all_dashboards", "dashboard", "run_query", "query_for_slug", "create_query",
@@ -30,5 +30,5 @@ constant: CONNECTION_NAME {
 }
 
 constant: VERSION {
-  value: "v0.1.1"
+  value: "v0.1.3"
 }

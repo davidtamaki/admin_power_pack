@@ -60,6 +60,7 @@ The following functions are available via the Actions bar:
   - Delete one of the following credential types for the selected users: "Email", "Google", "LDAP", "OIDC", "SAML"
 - **User Actions:**
   - **Enable / Disable users** - Enable or Disable selected users
+  - **Delete users** - Delete selected users
   - **Set / Delete user attributes** - Set and Delete User Attributes for selected users at a user level
   - **Add / Remove users to groups** - Add and Remove selected users from groups
   - **Set roles** - Set roles (overwrite) for selected users at a user level
