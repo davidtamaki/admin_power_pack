@@ -22,12 +22,13 @@ The Schedules++ Page enables admins to execute operations in bulk and modify all
   - **Run Once** - Reruns the schedule using the [scheduled_plan_run_once](https://docs.looker.com/reference/api-and-integration/api-reference/v4.0/scheduled-plan#run_scheduled_plan_once) endpoint. This is useful for testing specific schedules or if multiple schedules need to be resent immediately
   - **Disable** - Disable the schedule and prevent the schedule from sending until it’s re-enabled. The `Disable` and `Enable` functions modify the scheduled plan's enabled state. This is only accessible via Looker's API
   - **Enable** - Enables the schedule. Re-enabling a schedule will send (maximum 1) schedule immediately, if, while it was disabled it should have run
-- **Populate Rows** - This will generate a new schedule plan for each row in the results of a Looker query. The use case would be to create distinct schedules for non-Looker users where User Attributes can not be applied.
-  - Filter values will be populated if the field label matches the filter name on the Dashboard. Ensure there is a field "Email" to populate Recipients
+- **Generate Plans** - This will generate a new schedule plan for each row in the results of a Looker query. The use case would be to create distinct schedules for non-Looker users where User Attributes can not be applied.
+  - Filter values will be populated if the field label matches the filter name on the Dashboard. Ensure there is a field "Email" to populate recipient destinations
 - **Global Actions** - These actions will be applied across all schedules across the instance.
   - **Find & Replace Emails** - Update email destinations from a CSV of email address mappings
-  - **Reassign Ownership** - This will reassign ownership of all schedule plans from selected users to a new user
-  - **Resend Failed Schedules** - This will validate and resend any schedules that have failed on their most recent attempt, within a specified timeframe
+  - **Reassign Ownership** - Reassign ownership of all schedule plans from selected users to a new user
+  - **Resend Failed Schedules** - Validate and resend any schedules that have failed on their most recent attempt, within a specified timeframe
+  - **Select By Query** - Choose a bulk action to run (Enable, Disable, Delete, Run Once) on all schedule plans with a System Activity query ID
 
 ### Limitations
 
@@ -79,6 +80,16 @@ The following functions are available via the Actions bar:
 1. Follow the steps for enabling user authentication [here](https://docs.looker.com/admin-options/security)
 1. If the "Merge by Email" option is not working due to differences in the email credential (e.g. case sensitivity or a different domain), use the `Bulk update from mapping` function to update email addresses from a CSV mapping
 1. Finish the authentication setup
+1. Use the `Find & Replace Emails` function in the Schedules tab to bulk update the destination email addresses for all schedules
+
+### Switching to a new Idp
+
+1. Notify users not to log in and disable the existing IdP authentication in Admin/Authentication
+1. Use the `Auto-fill Email Credentials` function to create email creds (many users may only have IdP or API based creds)
+1. Use the `Bulk update from mapping` function to update email creds to new email addresses
+1. `Delete Creds` from the old Idp
+1. Enable new IdP authentication in Admin/Authentication
+1. Notify users to log in
 1. Use the `Find & Replace Emails` function in the Schedules tab to bulk update the destination email addresses for all schedules
 
 # Installation

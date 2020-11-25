@@ -16,7 +16,7 @@ application: admin_power_pack {
       "all_user_attributes", "set_user_attribute_user_value", "delete_user_attribute_user_value",
       "add_group_user", "delete_group_user", "set_user_roles",
       "all_dashboards", "dashboard", "run_query", "query_for_slug", "create_query",
-      "all_scheduled_plans", "scheduled_plans_for_dashboard", "scheduled_plan_run_once",
+      "scheduled_plan", "all_scheduled_plans", "scheduled_plans_for_dashboard", "scheduled_plan_run_once", "scheduled_plan_run_once_by_id",
       "create_scheduled_plan", "update_scheduled_plan", "delete_scheduled_plan",
       "create_user_credentials_email", "update_user_credentials_email",
       "delete_user_credentials_email", "delete_user_credentials_google", "delete_user_credentials_ldap", "delete_user_credentials_oidc", "delete_user_credentials_saml"
@@ -30,5 +30,5 @@ constant: CONNECTION_NAME {
 }
 
 constant: VERSION {
-  value: "v0.1.3"
+  value: "v0.1.4"
 }
