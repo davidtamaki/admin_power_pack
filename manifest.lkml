@@ -8,8 +8,9 @@ application: admin_power_pack {
     local_storage: no
     navigation: yes
     new_window: yes
-    allow_forms: yes
-    allow_same_origin: no
+    new_window_external_urls: ["https://docs.looker.com"]
+    use_form_submit: yes
+    use_embeds: no
     core_api_methods: [
       "all_roles", "all_users", "all_groups", "all_datagroups",
       "me", "user", "create_user", "update_user", "delete_user", "send_user_credentials_email_password_reset",
@@ -19,7 +20,8 @@ application: admin_power_pack {
       "scheduled_plan", "all_scheduled_plans", "scheduled_plans_for_dashboard", "scheduled_plan_run_once", "scheduled_plan_run_once_by_id",
       "create_scheduled_plan", "update_scheduled_plan", "delete_scheduled_plan",
       "create_user_credentials_email", "update_user_credentials_email",
-      "delete_user_credentials_email", "delete_user_credentials_google", "delete_user_credentials_ldap", "delete_user_credentials_oidc", "delete_user_credentials_saml"
+      "delete_user_credentials_email", "delete_user_credentials_google", "delete_user_credentials_ldap", "delete_user_credentials_oidc", "delete_user_credentials_saml",
+      "all_user_sessions", "delete_user_session"    
     ]
   } 
 }
@@ -30,5 +32,5 @@ constant: CONNECTION_NAME {
 }
 
 constant: VERSION {
-  value: "v0.1.4"
+  value: "v0.1.5"
 }
