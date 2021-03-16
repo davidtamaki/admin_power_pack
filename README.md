@@ -47,25 +47,35 @@ The Users++ Page offers greater flexibility in filtering and bulk selecting user
 
 Users can also be bulk selected based on a provided list of ids, email addresses, or a Looker query. Once users have been selected there are actions not available in the base UI, such as create email credentials and delete SSO credentials.
 
-The following functions are available via the Actions bar:
+The following functions are available via the _Actions_ bar:
 
 - **Select By:**
   - **User ID or email address** - Select users by CSV of user IDs or email address
   - **Query ID** - Select users with a System Activity query ID
-- **Manage Email:**
-  - **Auto-fill from other creds** - Create email credentials for selected users from the email address already assigned from other credential types
-  - **Bulk update from mapping** - Bulk update user email addresses according to a CSV mapping. This is very handy for companies that want to change email domains or SSO providers, and want to make sure that users keep their existing Looker account after the migration
+- **Bulk Mappings:**
   - **Bulk create from mapping** - Bulk create new users with User Attributes from a CSV mapping
-  - **Bulk send email creds** - Bulk send password reset emails to selected users. If the user has not yet set up their account, it will send a setup email to the user
-- **Delete Creds:**
-  - Delete one of the following credential types for the selected users: "Email", "Google", "LDAP", "OIDC", "SAML"
-- **User Actions:**
-  - **Enable / Disable users** - Enable or Disable selected users
-  - **Delete users** - Delete selected users
-  - **Logout users** - Terminate selected users sessions
-  - **Set / Delete user attributes** - Set and Delete User Attributes for selected users at a user level
-  - **Add / Remove users to groups** - Add and Remove selected users from groups
-  - **Set roles** - Set roles (overwrite) for selected users at a user level
+  - **Bulk update from mapping** - Bulk update user email addresses according to a CSV mapping. This is very handy for companies that want to change email domains or SSO providers, and want to make sure that users keep their existing Looker account after the migration
+- **Functions:**
+  - **Users**
+    - **Enable / Disable users** - Enable or Disable selected users
+    - **Delete users** - Delete selected users
+    - **Logout users** - Terminate selected users sessions
+  - **User Attributes**
+    - **Set / Delete user attributes** - Set and Delete User Attributes for selected users at a user level
+  - **Groups**
+    - **Add / Remove users to groups** - Add and Remove selected users from groups
+  - **Roles**
+    - **Set roles** - Set roles (overwrite) for selected users at a user level
+  - **Manage Credentials**
+    - **Auto-fill from other creds** - Create email credentials for selected users from the email address already assigned from other credential types
+    - **Bulk send email creds** - Bulk send password reset emails to selected users. If the user has not yet set up their account, it will send a setup email to the user
+    - **Delete Creds** - Delete one of the following credential types for the selected users: "Email", "Google", "LDAP", "OIDC", "SAML"
+
+The _Filters_ bar allows you to trim the displayed table of users to a specific subset of users, using the select menu, button group, and search bar. **(Note that all filters are additive)**
+
+- **Select Menu** - Quick filter menu used to only display users by type: _All Users_, _Regular Users_, _Embed Users_, _Looker Support_, or _Only Selected_. By default, the menu will display _Regular Users_ (excluding _Embed Users_ and _Looker Support_). _Only Selected_ will filter to users that have been selected
+- **Button Group** - Preset filter buttons to only display users that meet the criteria: _blank name_, _no email_, _no SSO_, _duplicate emails_, _duplicate names_, _disabled_, and _not disabled_
+- **Search Bar** - Search by user name, email, or id
 
 ## Common Workflows
 
