@@ -69,6 +69,7 @@ The following functions are available via the _Actions_ bar:
   - **Manage Credentials**
     - **Auto-fill from other creds** - Create email credentials for selected users from the email address already assigned from other credential types
     - **Bulk send email creds** - Bulk send password reset emails to selected users. If the user has not yet set up their account, it will send a setup email to the user
+    - **Bulk create password reset** - Bulk create password reset URLs for selected users. If the user has not yet set up their account, a setup URL is generated
     - **Delete Creds** - Delete one of the following credential types for the selected users: "Email", "Google", "LDAP", "OIDC", "SAML"
 
 The _Filters_ bar allows you to trim the displayed table of users to a specific subset of users, using the select menu, button group, and search bar. **(Note that all filters are additive)**
