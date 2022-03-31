@@ -132,7 +132,7 @@ LookML Projects are backed by git repositories. This repo has been set up with a
 1. Install via Marketplace Git URL (further details [here](https://docs.looker.com/data-modeling/marketplace#installing_a_tool_from_a_git_url))
    - Navigate to Marketplace => Manage
    - Click the three-dot menu, and select "Install via Git URL". Enter the following:
-     - Git Repository URL: `git://github.com/davidtamaki/admin_power_pack`
+     - Git Repository URL: `https://github.com/davidtamaki/admin_power_pack.git`
      - Git Commit SHA: `master`
    - Accept the extension project permissions
    - Select the connection name used in Step 1 and click Install
