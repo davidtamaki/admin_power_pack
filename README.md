@@ -134,6 +134,7 @@ LookML Projects are backed by git repositories. This repo has been set up with a
    - Click the three-dot menu, and select "Install via Git URL". Enter the following:
      - Git Repository URL: `https://github.com/davidtamaki/admin_power_pack.git`
      - Git Commit SHA: `master`
+     - _Note: For Looker instances on a release before 22.4, use the commit SHA from the previous [major release](https://github.com/davidtamaki/admin_power_pack/releases/tag/v0.1.7) of the Admin Power Pack: `b1c771b5d797ea0eb2a400412c06ad0dd27da664`. This is due to [breaking changes](https://developers.looker.com/api/advanced-usage/version-4-ga) to the API 4.0 endpoints. For Looker instances on the 22.4+ release, use the current major release of the Admin Power Pack._
    - Accept the extension project permissions
    - Select the connection name used in Step 1 and click Install
 1. Configure Model
