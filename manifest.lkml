@@ -32,5 +32,5 @@ constant: CONNECTION_NAME {
 }
 
 constant: VERSION {
-  value: "v1.0.0"
+  value: "v1.0.1"
 }
